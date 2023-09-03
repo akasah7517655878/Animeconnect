@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins",sans-serif;
+    
+}
+body{
+    background-color: black;
+}
+
+section{
+    padding-block: 4rem 3.5rem;
+}
+
+header{
+    position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	padding:1rem 7%;
+	display:flex;
+	justify-content:space-between;
+	z-index:10000;
+	box-shadow:var(--box-shadow);
+}
+
+header .logo{
+	color:blue;
+	font-size:2.5rem;
+	font-weight:bolder;
+	text-decoration:none;
+}
+header .logo{
+	color:#fff;
+}
+header .logo img{
+	height:20px;
+}
+header .logo span{
+	color:blue;
+}
+header .navbar a{
+	font-size:1rem;
+	border-radius:0.5rem;
+	padding:.5rem 1.5rem;
+	color:#fff;
+	text-decoration: none;
+    top: 12px;
+}
+header .navbar a.active{
+	color:#fff;
+	background:blue;
+}
+header .navbar a:hover{
+	color:#fff;
+	background:blue;
+}
+
+header .icons i{
+	font-size:2rem;
+	border-radius:0.5rem;
+	padding:.5rem 1.5rem;
+	color:#fff;
+	background:blue;
+	margin: 5px;
+	text-align:center;
+}
+
+header .icons i:hover{
+	color:blue;
+	background:#fff;
+}
+
+/* video slider*/
+
+.home{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*content*/
+    .home .containt{
+        position: absolute;
+        z-index: 2;
+        width: 50%;
+        margin-top: 30px;
+        display: block;
+        color: #fff;
+        margin-left:100px;
+        display: none;
+    }
+
+    .home .containt.active{
+        display: block;
+    }
+
+    .home .containt h1{
+        font-size: 3em;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin-bottom: 40px;
+        
+    }
+
+    .home .containt h1 span{
+        font-size: 1em;
+        font-weight: 600;
+    }
+
+    .home .containt p{
+        margin-bottom: 65px;
+    }
+
+    .home .containt a{
+        background-color: blue;
+        padding: 15px 35px;
+        color:#fff;
+        font-size: 1em;
+        font-weight: 500;
+        text-decoration: none;
+        border-radius: 2px;
+    }
+
+    /*video*/
+    .home video{
+        z-index: 0;
+        position: absolute;
+        margin-bottom:100px;
+    }
+
+    .video-slider{
+        position:absolute;
+        width: 100%;
+        clip-path: circle(0% at 0 50%);
+    }
+    .video-slider.active{
+        clip-path: circle(150% at 0 50%);
+        transition: 2s ease;
+        transition-property: clip-path;   
+    }
+
+    /*slider dots*/
+    .slider-nevigation{
+        z-index: 8;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(80px);
+        margin-bottom: 12px;
+        margin-left:1%;
+        width: 100%;
+        margin-top:350px;
+    }
+
+    .slider-nevigation .nav-btn{
+        width: 12px;
+        height: 12px;
+        background: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.3s ease;
+        padding: 12px;
+        margin: 12px;
+    }
+
+    .slider-nevigation .nav-btn.active{
+        background: blue;
+    }
+
+    .slider-nevigation .nav-btn:not(:lost-child){
+        margin-right: 20px;
+    }
+
+    .slider-nevigation .nav-btn:hover{
+        transform: scale(1.2);
+    }
+
+    /*video swiper*/
+    .anime_i_like .heading{
+        color: blue;
+        height: 50px;
+        width: auto;
+        margin-top: 12px;
+        padding-top: 15px;
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+
+    .anime_i_like .items{
+        display: flex;
+        padding: 50px;
+        justify-content: space-between;
+
+    }
+
+    .anime_i_like .item{
+        border-radius:50px;
+        transition:0.3s ease;
+    }
+
+    .anime_i_like .item:hover{
+        transform:scale(1.2);
+    }
+
+    .anime_i_like img{
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
+        
+        border-radius:20px;
+    }
+
+    .anime_i_like .para{
+        display: flex;
+        justify-content: center;
+        padding-top: 10px ;
+        color: yellow;
+    }
+
+    .anime_i_like .author
+    {
+        color: #fff;
+        padding-top: 10px;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+/*search icon*/
+.box{
+    height: 3rem;
+    display: flex;
+    cursor: pointer;
+    background-color: blue;
+    border-radius: 0.5rem;
+    align-items: center;
+    padding: 12px;
+}
+
+.box:hover input{
+    width:200px;
+}
+
+.box input{
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    font-size: 20px;
+    transition: 0.8s;
+    background: transparent;
+    color: #fff;
+}
+
+.box i{
+    color: #fff;
+}
